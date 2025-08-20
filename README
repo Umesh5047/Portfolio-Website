@@ -1,0 +1,106 @@
+readme = """# Portfolio Website (React + Vite + Material UI)
+
+A personal portfolio website built with React, React Router, Material UI, and a simple localStorage-based authentication flow (signup/login/logout). It supports light/dark themes and includes sections for Introduction, Skills, Projects, and Contact.
+
+> Design note: This project is structured to let you closely match the provided Figma mockup. Swap images, tweak spacing/typography, and update colors to match the design exactly.
+
+## Features
+- Signup & Login (localStorage-backed; no backend required)
+- Protected portfolio route (requires login)
+- Session persistence
+- Portfolio sections: Intro, Skills, Projects, Contact (with validation)
+- Light/Dark theme toggle (Material UI)
+- React Router navigation
+- Clean, accessible, responsive layout
+
+## Getting Started
+
+```bash
+# 1) Install dependencies
+npm install
+
+# 2) Run locally
+npm run dev
+
+# 3) Build for production
+npm run build
+npm run preview
+
+Project Structure
+.
+├── index.html
+├── package.json
+├── vite.config.js
+└── src
+    ├── App.jsx
+    ├── main.jsx
+    ├── components
+    │   ├── Navbar.jsx
+    │   ├── ProtectedRoute.jsx
+    │   └── Sections.jsx
+    ├── context
+    │   ├── AuthContext.jsx
+    │   └── ThemeContext.jsx
+    └── pages
+        ├── Login.jsx
+        ├── Portfolio.jsx
+        └── Signup.jsx
+
+Customization Checklist
+
+In Sections.jsx, replace profile avatar, name, profession, and buttons with your details.
+
+Update projects array (title, description, repo, demo, image).
+
+Replace /resume.pdf link with your resume (place a file named resume.pdf in the project root or public folder).
+
+Adjust MUI theme colors in ThemeContext.jsx to match the Figma file.
+
+If you prefer Bootstrap instead of MUI, you can replace components accordingly.
+
+Deployment
+Deploy to Vercel
+
+Push this project to a GitHub repository.
+
+Go to Vercel dashboard → New Project → Import your repo.
+
+Framework preset: Vite (auto-detected). Build command: vite build or npm run build; Output: dist.
+
+Add Build Command: npm run build, Output Directory: dist.
+
+Deploy.
+
+Deploy to Netlify
+
+New Site from Git → pick your repo.
+
+Build command: npm run build
+
+Publish directory: dist
+
+Deploy.
+
+Deploy to Render (Static)
+
+New Static Site → connect repo.
+
+Build command: npm run build
+
+Publish directory: dist
+
+Since auth uses localStorage only, this is a demo auth flow. For production-ready auth, consider Firebase Auth, Auth0, or your own backend.
+
+Notes on the Figma
+
+Use MUI spacing and sx props to fine-tune paddings/margins to pixel-match the mock.
+
+Create additional components (Hero, About, Timeline, etc.) if your mockup includes them.
+
+Add motion (e.g., Framer Motion) if required by the assignment for extra polish.
+
+License
+
+MIT
+"""
+open(os.path.join(base, "README.md"), "w").write(readme)
